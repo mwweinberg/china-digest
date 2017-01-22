@@ -108,7 +108,9 @@ holder_cat_2 = []
 #opens the input doc with the URLs
 txt = open("input.csv")
 #opens the output doc where the error output data will live
-output_txt = open("china-daily-email-error-output.txt", "w")
+#"a" mode is "append" mode instead of "write" mode ("w")
+#this allows this file to be a running list of error files
+output_txt = open("china-daily-email-error-output.txt", "a")
 
 #****************************************
 #*****This is for the email version******
